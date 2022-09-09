@@ -22,13 +22,16 @@ describe('AppController', () => {
 
   describe('root', () => {
     it('should visit CryptoTao App and test some stuff"', async () => {
-      const data = await appController.checkCryptoTaoApp()
+      const data = await appController.checkCryptoTaoApp();
 
-      expect(data.title).toEqual('CryptoTao')
-      expect(data.subtitle).toEqual('A better way tounlock your digital assets')
-      expect(data.callToActionBtn).toEqual('Join the waitlist')
-      expect(data.banner).toEqual('https://tailwindui.com/img/component-images/cloud-illustration-teal-cyan.svg')
+      expect(data.title).toEqual('CryptoTao');
+      expect(data.subtitle).toEqual(
+        'A better way tounlock your digital assets',
+      );
+      expect(data.callToActionBtn).toEqual('Join the waitlist');
+      expect(data.banner).toEqual(
+        'https://tailwindui.com/img/component-images/cloud-illustration-teal-cyan.svg',
+      );
     });
   });
-
 });
