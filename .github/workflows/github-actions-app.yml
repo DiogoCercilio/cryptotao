@@ -1,0 +1,10 @@
+name: Github Action for CryptoTao 
+on: [push]
+jobs:
+  RunTests:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Tests
+    - run: "echo Running all tests..."
+    - run: npm run format && npm run lint && npm test
+    - run: echo "🍏 This job's status is ${{ job.status }}."
