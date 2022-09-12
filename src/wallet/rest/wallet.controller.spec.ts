@@ -19,17 +19,21 @@ describe('WalletController', () => {
     expect(controller).toBeDefined();
   });
 
-  it('should throw an error when don\'t receive a wallet address', () => {
+  it("should throw an error when don't receive a wallet address", () => {
     try {
       expect(controller.findAll(null)).rejects.toThrow(BadRequestException);
-      expect(true).toBe(false) // In case not throwing an error
+      expect(true).toBe(false); // In case not throwing an error
     } catch (err) {
-      expect(err.message).toBe("Wallet Address is mandatory");
+      expect(err.message).toBe('Wallet Address is mandatory');
     }
   });
 
   it('should throw an error when receive wrong wallet address params', () => {
-    expect(controller.findAll('aaaaa')).rejects.toThrowError(BadRequestException);
-    expect(controller.findAll('aaaaa')).rejects.toThrow("Can't resolve provided name into valid Solana address =(");
+    expect(controller.findAll('aaaaa')).rejects.toThrowError(
+      BadRequestException,
+    );
+    expect(controller.findAll('aaaaa')).rejects.toThrow(
+      "Can't resolve provided name into valid Solana address =(",
+    );
   });
 });

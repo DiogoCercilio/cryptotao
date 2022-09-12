@@ -1,4 +1,10 @@
-import { BadRequestException, Controller, Get, Param, Query } from '@nestjs/common';
+import {
+  BadRequestException,
+  Controller,
+  Get,
+  Param,
+  Query,
+} from '@nestjs/common';
 import { WalletService } from '../wallet.service';
 
 @Controller('wallet')
@@ -7,8 +13,8 @@ export class WalletController {
 
   @Get('nft')
   findAll(@Query('walletAddress') walletAddress: string) {
-    if(!walletAddress) {
-      throw new BadRequestException('Wallet Address is mandatory')
+    if (!walletAddress) {
+      throw new BadRequestException('Wallet Address is mandatory');
     }
     return this.walletService.findAll(walletAddress);
   }

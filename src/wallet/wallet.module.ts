@@ -11,9 +11,8 @@ import { ApolloDriver, ApolloDriverConfig } from '@nestjs/apollo';
   imports: [
     GraphQLModule.forRoot<ApolloDriverConfig>({
       autoSchemaFile: './graphql/wallet.graphql',
-      driver: ApolloDriver
+      driver: ApolloDriver,
     }),
   ],
 })
-
 export class WalletModule {}
