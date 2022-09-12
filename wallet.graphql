@@ -1,0 +1,14 @@
+# ------------------------------------------------------
+# THIS FILE WAS AUTOMATICALLY GENERATED (DO NOT MODIFY)
+# ------------------------------------------------------
+
+type Nft {
+  id: Int!
+  firstName: String
+  lastName: String
+  posts: String!
+}
+
+type Query {
+  nft(walletAddress: String!): [Nft!]!
+}

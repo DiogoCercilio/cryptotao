@@ -23,11 +23,19 @@
     "prepare": "husky install"
   },
   "dependencies": {
+    "@nestjs/apollo": "^10.1.0",
     "@nestjs/common": "^9.0.0",
     "@nestjs/core": "^9.0.0",
+    "@nestjs/graphql": "^10.1.1",
+    "@nestjs/mapped-types": "*",
     "@nestjs/platform-express": "^9.0.0",
+    "@nfteyez/sol-rayz": "^0.10.2",
+    "@solana/web3.js": "^1.60.0",
+    "apollo-server-express": "^3.10.2",
     "cheerio": "^1.0.0-rc.12",
     "got": "9.6.0",
+    "graphql": "^16.6.0",
+    "graphql-tools": "^8.3.6",
     "reflect-metadata": "^0.1.13",
     "rimraf": "^3.0.2",
     "rxjs": "^7.2.0"

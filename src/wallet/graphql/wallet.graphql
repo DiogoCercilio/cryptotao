@@ -1,0 +1,7 @@
+type Query {
+  nft: [Nft]!
+}
+
+# type Mutation {
+#   ... // Mutations in general goes here...
+# }

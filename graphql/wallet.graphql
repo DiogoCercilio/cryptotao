@@ -1,0 +1,36 @@
+# ------------------------------------------------------
+# THIS FILE WAS AUTOMATICALLY GENERATED (DO NOT MODIFY)
+# ------------------------------------------------------
+
+type NFTItemData {
+  name: String!
+  symbol: String!
+  uri: String!
+  sellerFeeBasisPoints: Float!
+  creators: [NFTItemDataCreator!]!
+}
+
+type NFTItem {
+  key: Float!
+  updateAuthority: String!
+  mint: String!
+  data: NFTItemData!
+  primarySaleHappened: Boolean!
+  isMutable: Boolean!
+  editionNonce: Float
+}
+
+type NFTItemDataCreator {
+  address: String!
+  verified: Float!
+  share: Float!
+}
+
+type WalletResponse {
+  publicAddress: String!
+  nftArray: [NFTItem!]!
+}
+
+type Query {
+  nft(walletAddress: String!): WalletResponse!
+}
