@@ -47,6 +47,16 @@ $ npm run test:e2e
 # test coverage
 $ npm run test:cov
 ```
+## All endpoints:
+
+Published version (AWS Ec2)
+http://ec2-44-201-84-150.compute-1.amazonaws.com:3000/
+
+- `{url}`/ - The main Hello World
+- `{url}`/check - A simple scrapping script for the CryptoTao main website
+- `{url}`/graphql  - The Apollo Client Main Page
+- `{url}`/wallet/nft?walletAddress={walletAddressString}
+
 ## License
 
 This project has a public [GNU GENERAL PUBLIC LICENSE](LICENSE).
