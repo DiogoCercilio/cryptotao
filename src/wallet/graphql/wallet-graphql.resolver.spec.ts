@@ -2,7 +2,7 @@ import { Test, TestingModule } from '@nestjs/testing';
 import { WalletService } from '../wallet.service';
 import { WalletGraphqlResolver } from './wallet-graphql.resolver';
 
-describe.only('WalletGraphqlResolver', () => {
+describe('WalletGraphqlResolver', () => {
   let resolver: WalletGraphqlResolver;
 
   beforeEach(async () => {
@@ -51,7 +51,7 @@ describe.only('WalletGraphqlResolver', () => {
   });
 
   describe('Get NFTs', () => {
-    it.only('should get the NFT array', async () => {
+    it('should get the NFT array', async () => {
       expect(
         await resolver.nft('H2x683jpLQMgCKWkiRkkTd3HuMQTgNeW5yAyWsLQYq8a'),
       ).toEqual([
